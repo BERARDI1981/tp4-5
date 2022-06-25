@@ -1,0 +1,140 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: gray;
+    font-size: smaller;
+    color: aqua;
+
+}
+
+.title h1 {
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 80px;
+}
+
+
+.header h2 {
+    padding: 20px 0;
+    text-align: center;
+    
+}
+
+
+.menu {
+    list-style: none;
+    padding: 0;
+    background: black;
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    font-size: 25px;
+}
+
+.menu li a:hover {
+    background: white;
+}
+
+
+.menu li a {
+    text-decoration: none;
+    color: aquamarine;
+    padding: 20px;
+    display: block;
+    border: 1px solid white;
+}
+
+.menu li {
+    display: inline-block;
+}
+
+.contenedor {
+    background: black;
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "content barraLateral"
+        "contactos contactos";
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 1fr auto 1fr;
+}
+
+.header {
+    grid-area: header;
+    background-color: brown;
+}
+
+.content {
+    grid-area: content;
+    background-color: red;
+    
+    
+}
+.content article {
+   background-color: darkolivegreen;
+    margin-bottom: 30px;
+    padding: 20px;
+    height: 30%;
+}
+
+.barraLateral {
+    grid-area: barraLateral;
+    background-color: blue;
+    
+}
+.barraLateral div {
+    background-color: darkslategrey;
+    margin-bottom: 30px;
+    padding: 20px;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.contactos {
+    grid-area: contactos;
+    background-color: chartreuse;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.contactos .another_post {
+    background: rgb(10, 109, 109);
+    text-align: center;
+    color: black;
+    border: 2px solid black;
+    width: 30%;
+}
+
+
+
+.footer {
+    width: 90%;
+    height: 100px;
+    margin: auto;
+    background-color: black;
+}
+
+@media screen and (max-width:768px){
+    .contenedor {
+        background: black;
+        width: 90%;
+        margin: auto;
+        display: grid;
+        grid-template-areas:
+            "header "
+            "content" 
+            "barraLateral"
+            "contactos ";
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr auto auto 1fr;
+    }
+}

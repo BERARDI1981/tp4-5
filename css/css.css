@@ -1,0 +1,149 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: black;
+    color: aliceblue;
+}
+
+.title{
+    text-align: center;
+    color: aquamarine;
+    font-size: 29px;
+ }
+
+.menu{
+    list-style: none;
+    padding: 0;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
+    font-size: 25px;
+}
+
+.menu li a:hover{
+background: white;
+}
+
+
+.menu li a{
+    text-decoration: none;
+    color: aquamarine;
+    padding: 20px;
+    display: block;
+    border: 1px solid white;
+}
+
+.menu li{
+    display: inline-block;
+}
+
+.evolucion{
+    margin-top: 100px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 20px;
+    color: aquamarine;
+    border: 1px solid rgb(126, 109, 109);
+}
+
+.article{
+    margin-top: 20px;
+    border: 8px solid rgb(126, 109, 109);
+}
+
+div img{
+    border: 8px solid rgb(126, 109, 109);
+}
+
+.contenedor{
+    width: 90%; 
+    max-width: 1000px;
+    height: 100%;
+    margin: 1.6rem auto;
+    background: rgb(105, 98, 98);
+    
+
+    display: grid;
+    gap: 1.6rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-areas: 
+                        "content barraLatarel"
+                        "footer footer";
+}
+
+.content{ 
+    grid-area: content;
+    grid-column: 1/4;
+    grid-row: 1/2;
+}
+
+.barraLateral{ 
+    grid-area: barraLateral;
+    grid-column: 4/6;
+    grid-row: 1/2;
+    margin-top: 22px;
+   }
+
+.footer{ 
+    grid-area: footer;
+    grid-column: 1/6;
+    height: 50px;
+    border: 1px solid white;
+}
+
+.imagenesMamiferos{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "foto1 foto2"
+                         "foto3 foto4"
+                         "foto5.";
+}
+
+.imagenesMamiferos{
+    
+    margin-top: 100px;
+    margin-left: 100px;
+}
+
+.imagenesMamiferos p{
+    align-items: center;
+    display: flex;
+    height: 100px;
+    justify-content: center;
+    width: 600px;
+}
+
+
+.hipopotamo{
+    grid-area: foto1;
+}
+
+.jorafa{
+    grid-area: foto2;
+    }
+
+.koala{
+        grid-area: foto3;
+        }
+
+.leones{
+        grid-area: foto4;
+            }
+
+.tigre{
+        grid-area: foto5;
+                }
+
+    
+
+
+
+
+
